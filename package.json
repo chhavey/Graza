@@ -1,0 +1,16 @@
+{
+  "name": "graza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+      "build": "tailwindcss build styles.css -o output.css",    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chhavi Gupta",
+  "license": "ISC"
+}

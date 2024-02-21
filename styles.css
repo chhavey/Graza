@@ -1,0 +1,16 @@
+/* font-family: "GT Alpina Typewriter", sans-serif !important; */
+/* font-family: "ITC Garamond Condensed", sans-serif !important; */
+
+body {
+  background-color: #f6e6d9;
+  font-family: "GT Alpina Typewriter", sans-serif;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar {
+  border-bottom: 1px solid #3c422e;
+  padding: 0.1em;
+  font-weight: 600;
+}
