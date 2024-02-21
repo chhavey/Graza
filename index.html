@@ -35,7 +35,7 @@
       </div>
 
       <div
-        class="rightSection md:w-1/2 overflow-y-auto flex flex-col items-center justify-start"
+        class="rightSection md:w-1/2 overflow-y-auto md:h-screen flex flex-col items-center justify-start"
       >
         <div class="title">
           <p>“Drizzle” & “Sizzle”</p>
@@ -54,24 +54,40 @@
           <div
             class="sets grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 border-b border-dashed border-black pb-2"
           >
-            <div class="set flex flex-col items-center">
+            <div
+              class="selectedSet set flex flex-col items-center"
+              id="set1"
+              onclick="toggleSet('set1')"
+            >
               <p class="font-semibold text-2xl mt-2">1</p>
               <p class="font-semibold">Set</p>
               <p class="label mt-1">+10% Off</p>
             </div>
-            <div class="set flex flex-col items-center">
+            <div
+              class="set flex flex-col items-center"
+              id="set2"
+              onclick="toggleSet('set2')"
+            >
               <p class="font-semibold text-2xl mt-2">2</p>
               <p class="font-semibold">Sets</p>
               <p class="label mt-1">Free Shipping!</p>
               <p class="label">+14% Off</p>
             </div>
-            <div class="set flex flex-col items-center">
+            <div
+              class="set flex flex-col items-center"
+              id="set3"
+              onclick="toggleSet('set3')"
+            >
               <p class="font-semibold text-2xl mt-2">3</p>
               <p class="font-semibold">Sets</p>
               <p class="label mt-1">Free Shipping!</p>
               <p class="label">+15% Off</p>
             </div>
-            <div class="set flex flex-col items-center">
+            <div
+              class="set flex flex-col items-center"
+              id="set6"
+              onclick="toggleSet('set6')"
+            >
               <p class="font-semibold text-2xl mt-2">6</p>
               <p class="font-semibold">Sets</p>
               <p class="label mt-1">Free Shipping!</p>
@@ -83,35 +99,56 @@
             <div
               class="flex justify-between items-center font-semibold border-b border-dashed border-black pb-4"
             >
-              <div class="purchaseOption flex items-center">
+              <div
+                class="purchaseOption flex items-center"
+                onclick="togglePurchaseOption('option1')"
+              >
                 <div
-                  class="radioBtn h-5 w-5 border border-black mr-2 rounded-xl"
+                  class="selectedRadio radioBtn h-5 w-5 border border-black mr-2 rounded-xl"
+                  id="option1"
                 ></div>
                 <label for="option1">One Time Purchase</label>
               </div>
-              <label for="option1">$37</label>
+              <label for="option1"
+                ><span
+                  class="prev line-through text-gray-400 font-medium"
+                ></span
+                >&nbsp;<span class="otpPrice">$37</span></label
+              >
             </div>
             <div
               class="flex justify-between items-center font-semibold border-b border-dashed border-black pt-4 pb-4"
             >
-              <div class="purchaseOption flex items-center">
+              <div
+                class="purchaseOption flex items-center"
+                onclick="togglePurchaseOption('option2')"
+              >
                 <div
                   class="radioBtn h-5 w-5 border border-black mr-2 rounded-xl"
+                  id="option2"
                 ></div>
                 <label for="option1">Subscribe & Save</label>
               </div>
               <label for="option2"
-                ><span class="line-through text-gray-400 font-medium">$37</span>
-                $33.30</label
+                ><span class="previous line-through text-gray-400 font-medium"
+                  >$37</span
+                >
+                <span class="subPrice">$33.30</span></label
               >
             </div>
           </div>
 
           <div class="btnWrapper relative mt-4">
             <div
-              class="absolute right-0 bottom-1 mr-1 mb-2 w-full addBtn border border-black rounded-2xl text-center cursor-pointer font-semibold mt-4"
+              class="cartBtn absolute right-0 bottom-1 mr-1 mb-2 w-full addBtn border border-black rounded-2xl text-center cursor-pointer font-semibold mt-4"
             >
               Add to Cart - $37
+            </div>
+            <div
+              class="subBtn absolute right-0 bottom-1 mr-1 mb-2 w-full addBtn border border-black rounded-2xl text-center cursor-pointer font-semibold mt-4"
+              style="display: none"
+            >
+              Subscribe - $33.30
             </div>
             <div class="custom-button h-8 w-full"></div>
           </div>

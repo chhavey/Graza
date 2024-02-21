@@ -11,6 +11,80 @@ window.addEventListener("scroll", function () {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
 
+//------------------------js for purchase-----------------------------
+
+function toggleSet(setId) {
+    const sets = document.querySelectorAll('.set');
+    sets.forEach(set => {
+        if (set.id === setId) {
+            set.classList.add('selectedSet');
+        } else {
+            set.classList.remove('selectedSet');
+        }
+    });
+
+    let priceLabel, prevPrice, previousSubPrice, subscribePrice;
+    switch (setId) {
+        case 'set1':
+            prevPrice = "";
+            priceLabel = "$37";
+            previousSubPrice = "$37";
+            subscribePrice = "$33.30";
+            break;
+        case 'set2':
+            prevPrice = "$74";
+            priceLabel = "$69";
+            previousSubPrice = "$74";
+            subscribePrice = "$64.17";
+            break;
+        case 'set3':
+            prevPrice = "$111";
+            priceLabel = "$102";
+            previousSubPrice = "$111";
+            subscribePrice = "$94.86";
+            break;
+        case 'set6':
+            prevPrice = "$222";
+            priceLabel = "$199";
+            previousSubPrice = "$222";
+            subscribePrice = "$185.07";
+            break;
+        default:
+            prevPrice = "";
+            priceLabel = "$37";
+            previousSubPrice = "$74";
+            subscribePrice = "$33.30";
+            break;
+    }
+    document.querySelector('.prev').textContent = prevPrice;
+    document.querySelector('.otpPrice').textContent = priceLabel;
+    document.querySelector('.previous').textContent = previousSubPrice;
+    document.querySelector('.subPrice').textContent = subscribePrice;
+    document.querySelector('.cartBtn').textContent = `Add to Cart - ${priceLabel}`;
+    document.querySelector('.subBtn').textContent = `Subscribe - ${subscribePrice}`;
+
+}
+
+function togglePurchaseOption(option) {
+    const purchaseOptions = document.querySelectorAll('.radioBtn');
+    purchaseOptions.forEach(purchaseOption => {
+        purchaseOption.classList.remove('selectedRadio');
+    });
+    document.getElementById(option).classList.add('selectedRadio');
+
+    const cartButton = document.querySelector('.cartBtn');
+    const subButton = document.querySelector('.subBtn');
+
+    if (option === 'option1') {
+        cartButton.style.display = 'block';
+        subButton.style.display = 'none';
+    } else {
+        cartButton.style.display = 'none';
+        subButton.style.display = 'block';
+    }
+}
+
+
 //-----------------------Js to switch tabs----------------------------
 document.querySelector('.selectedTab').classList.add('selectedTab');
 

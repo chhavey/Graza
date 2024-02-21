@@ -16,10 +16,6 @@ body {
   font-weight: 600;
 }
 
-.rightSection {
-  overflow-y: auto;
-  height: 100vh;
-}
 .rightSection::-webkit-scrollbar {
   display: none;
 }
@@ -58,18 +54,28 @@ body {
   background-color: #fff4ec;
   border-radius: 0.5rem;
 }
-.set:hover {
+.set:not(.selectedSet):hover {
   background-color: #f6e6d9;
   cursor: pointer;
+}
+
+.selectedSet {
+  background-color: #9eef80;
+  border: 1px solid #3c422e;
+  border-radius: 0.5rem;
 }
 
 .label {
   font-size: 0.625rem;
 }
+
+.selectedRadio {
+  background-color: #9eef80;
+}
 .purchaseOption:hover {
   cursor: pointer;
 
-  .radioBtn {
+  .radioBtn:not(.selectedRadio) {
     background-color: #f6e6d9;
   }
 }
