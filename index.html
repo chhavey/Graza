@@ -28,10 +28,80 @@
       <p class="text-center text-xs">HI! WE &lt;3 YOU FOR VISITING OUR SITE</p>
     </div>
     <div class="flex flex-col md:flex-row pt-5">
-      <div
-        class="md:w-1/2 overflow-y-auto md:overflow-y-visible md:h-screen relative bg-yellow-100"
-      >
-        <img src="./assets/image1.png" class="h-auto w-full" />
+      <div class="leftSection md:w-1/2 overflow-y-auto relative">
+        <div class="carousel">
+          <img src="./assets/image1.png" class="slide active h-6" />
+          <img src="./assets/image2.png" class="slide" />
+          <img src="./assets/image3.png" class="slide" />
+          <img src="./assets/image4.png" class="slide" />
+          <img src="./assets/image5.png" class="slide" />
+          <img src="./assets/image6.png" class="slide" />
+        </div>
+        <div
+          class="controls flex justify-center md:absolute md:justify-end md:items-start md:flex-col md:left-0 md:bottom-7 md:pl-8"
+        >
+          <button class="control-btn" onclick="showSlide(1)">
+            <div
+              class="mobile-view selected w-2 h-2 border border-black rounded-full mr-2 mt-2"
+            ></div>
+            <img
+              class="web-view w-14 selected"
+              src="./assets/image1.png"
+              alt="Slide 1"
+            />
+          </button>
+          <button class="control-btn" onclick="showSlide(2)">
+            <div
+              class="mobile-view w-2 h-2 border border-black rounded-full mr-2 mt-2"
+            ></div>
+
+            <img
+              class="web-view w-14"
+              src="./assets/image2.png"
+              alt="Slide 2"
+            />
+          </button>
+          <button class="control-btn" onclick="showSlide(3)">
+            <div
+              class="mobile-view w-2 h-2 border border-black rounded-full mr-2 mt-2"
+            ></div>
+            <img
+              class="web-view w-14"
+              src="./assets/image3.png"
+              alt="Slide 3"
+            />
+          </button>
+          <button class="control-btn" onclick="showSlide(4)">
+            <div
+              class="mobile-view w-2 h-2 border border-black rounded-full mr-2 mt-2"
+            ></div>
+            <img
+              class="web-view w-14"
+              src="./assets/image4.png"
+              alt="Slide 4"
+            />
+          </button>
+          <button class="control-btn" onclick="showSlide(5)">
+            <div
+              class="mobile-view w-2 h-2 border border-black rounded-full mr-2 mt-2"
+            ></div>
+            <img
+              class="web-view w-14"
+              src="./assets/image5.png"
+              alt="Slide 5"
+            />
+          </button>
+          <button class="control-btn" onclick="showSlide(6)">
+            <div
+              class="mobile-view w-2 h-2 border border-black rounded-full mr-2 mt-2"
+            ></div>
+            <img
+              class="web-view w-14 h-14 object-cover"
+              src="./assets/image6.png"
+              alt="Slide 6"
+            />
+          </button>
+        </div>
       </div>
 
       <div

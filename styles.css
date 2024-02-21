@@ -1,6 +1,3 @@
-/* font-family: "GT Alpina Typewriter", sans-serif !important; */
-/* font-family: "ITC Garamond Condensed", sans-serif !important; */
-
 body {
   background-color: #f6e6d9;
   font-family: "GT Alpina Typewriter", sans-serif;
@@ -144,4 +141,56 @@ body {
 
 .contentBox {
   margin-top: -1rem;
+}
+
+/* -----carousel-----*/
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 98vh;
+  object-fit: cover;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.web-view {
+  display: none;
+  border: 2px solid black;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
+}
+
+.mobile-view.selected {
+  background-color: #9eef80;
+}
+
+.web-view.selected {
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .web-view {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-view {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: 90vh;
+  }
 }

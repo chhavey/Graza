@@ -11,6 +11,27 @@ window.addEventListener("scroll", function () {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
 
+// -----------------------carousel------------------------------------
+
+let currentSlide = 1;
+
+function showSlide(slideIndex) {
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[slideIndex - 1].classList.add('active');
+    currentSlide = slideIndex;
+
+    const buttons = document.querySelectorAll('.control-btn');
+    buttons.forEach(button => {
+        button.querySelector('.mobile-view').classList.remove('selected');
+        button.querySelector('.web-view').classList.remove('selected');
+    });
+    const selectedButton = document.querySelector(`.control-btn:nth-child(${slideIndex})`);
+    selectedButton.querySelector('.mobile-view').classList.add('selected');
+    selectedButton.querySelector('.web-view').classList.add('selected');
+}
+
+
 //------------------------js for purchase-----------------------------
 
 function toggleSet(setId) {
