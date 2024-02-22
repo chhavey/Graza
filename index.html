@@ -24,11 +24,18 @@
   </head>
 
   <body class="min-h-screen w-full">
-    <div id="navbar" class="w-full p-4 fixed top-0">
+    <div id="navbar" class="navbar w-full p-4 fixed top-0">
       <p class="text-center text-xs">HI! WE &lt;3 YOU FOR VISITING OUR SITE</p>
     </div>
+    <div
+      id="scrollUpDiv"
+      class="fixed top-8 z-20 w-full flex justify-center md:justify-start md:left-10 transition-transform duration-300"
+    >
+      <img src="./assets/graza.svg" style="opacity: 0.7" />
+    </div>
+
     <div class="flex flex-col md:flex-row pt-5">
-      <div class="leftSection md:w-1/2 overflow-y-auto relative">
+      <div class="md:w-1/2 overflow-y-auto relative">
         <div class="carousel">
           <img src="./assets/image1.png" class="slide active h-6" />
           <img src="./assets/image2.png" class="slide" />
@@ -107,14 +114,13 @@
       <div
         class="rightSection md:w-1/2 overflow-y-auto md:h-screen flex flex-col items-center justify-start"
       >
-        <div class="title">
+        <div class="title text-center text-5xl md:text-6xl font-semibold">
           <p>“Drizzle” & “Sizzle”</p>
-          <p class="subtitle">Extra Virgin Olive Oil</p>
-          <hr class="rule" />
+          <p class="subtitle text-center">Extra Virgin Olive Oil</p>
         </div>
         <div class="rating flex mt-5 items-center">
-          <img src="./assets/rating.png" class="h-4 mr-2" />
-          1599 Reviews
+          <img src="./assets/ratings.png" class="h-4 mr-2" />
+          1601 Reviews
         </div>
 
         <div
@@ -186,25 +192,41 @@
                 >&nbsp;<span class="otpPrice">$37</span></label
               >
             </div>
-            <div
-              class="flex justify-between items-center font-semibold border-b border-dashed border-black pt-4 pb-4"
-            >
+            <div class="border-b border-dashed border-black">
               <div
-                class="purchaseOption flex items-center"
-                onclick="togglePurchaseOption('option2')"
+                class="flex justify-between items-center font-semibold pt-4 pb-4"
               >
                 <div
-                  class="radioBtn h-5 w-5 border border-black mr-2 rounded-xl"
-                  id="option2"
-                ></div>
-                <label for="option1">Subscribe & Save</label>
-              </div>
-              <label for="option2"
-                ><span class="previous line-through text-gray-400 font-medium"
-                  >$37</span
+                  class="purchaseOption flex items-center"
+                  onclick="togglePurchaseOption('option2')"
                 >
-                <span class="subPrice">$33.30</span></label
+                  <div
+                    class="radioBtn h-5 w-5 border border-black mr-2 rounded-xl"
+                    id="option2"
+                  ></div>
+                  <label for="option1">Subscribe & Save</label>
+                </div>
+                <label for="option2"
+                  ><span class="previous line-through text-gray-400 font-medium"
+                    >$37</span
+                  >
+                  <span class="subPrice">$33.30</span>
+                </label>
+              </div>
+
+              <select
+                class="frequency mb-4 w-full p-2 text-center font-medium rounded-full border border-black"
               >
+                <option value="option1" class="opt">
+                  Frequency: Every 1 Month
+                </option>
+                <option value="option2" class="opt">
+                  Frequency: Every 2 Months
+                </option>
+                <option value="option3" class="opt">
+                  Frequency: Every 3 Months
+                </option>
+              </select>
             </div>
           </div>
 
@@ -223,7 +245,7 @@
             <div class="custom-button h-8 w-full"></div>
           </div>
 
-          <div class="text-center text-sm">
+          <div class="otpLabel text-center text-sm">
             <span class="font-medium">
               *HEADS UP! MULTIPLE SETS OF DRIZZLE & SIZZLE SHIP IN THE SAME BOX!
               TO ORDER INDIVIDUALLY PACKAGED GIFT SETS,</span
@@ -234,6 +256,7 @@
             🎁
             <p class="mt-2 text-base"><u>Send as a gift</u></p>
           </div>
+          <div class="subLabel text-center text-sm">Skip or cancel anytime</div>
         </div>
 
         <div

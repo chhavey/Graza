@@ -11,6 +11,16 @@ window.addEventListener("scroll", function () {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 }, false);
 
+window.addEventListener('scroll', function () {
+    const scrollUpDiv = document.getElementById('scrollUpDiv');
+    if (window.scrollY > 0) {
+        scrollUpDiv.style.transform = 'translateY(-150%)';
+    } else {
+        scrollUpDiv.style.transform = 'translateY(0)';
+    }
+});
+
+
 // -----------------------carousel------------------------------------
 
 let currentSlide = 1;
@@ -95,13 +105,22 @@ function togglePurchaseOption(option) {
 
     const cartButton = document.querySelector('.cartBtn');
     const subButton = document.querySelector('.subBtn');
+    const otpLabel = document.querySelector('.otpLabel');
+    const subLabel = document.querySelector('.subLabel');
+    const frequency = document.querySelector('.frequency');
 
     if (option === 'option1') {
         cartButton.style.display = 'block';
         subButton.style.display = 'none';
+        otpLabel.style.display = 'block';
+        subLabel.style.display = 'none';
+        frequency.style.display = 'none';
     } else {
         cartButton.style.display = 'none';
         subButton.style.display = 'block';
+        subLabel.style.display = 'block';
+        otpLabel.style.display = 'none';
+        frequency.style.display = 'block';
     }
 }
 

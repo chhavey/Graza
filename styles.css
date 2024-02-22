@@ -7,7 +7,7 @@ body {
   color: #3c422e;
 }
 
-#navbar {
+.navbar {
   border-bottom: 1px solid #3c422e;
   padding: 0.1em;
   font-weight: 600;
@@ -19,20 +19,14 @@ body {
 
 .title {
   font-family: "ITC Garamond Condensed", sans-serif;
-  font-size: 3.65rem;
   font-weight: 500;
   margin-top: 6rem;
-}
-
-.subtitle {
-  margin-top: -2.5rem;
-}
-
-.rule {
-  margin-top: -1.5rem;
+  letter-spacing: -1px;
   border-bottom: 2px solid #3c422e;
 }
-
+.subtitle {
+  margin-bottom: -0.45rem;
+}
 .rating {
   font-weight: 600;
 }
@@ -107,6 +101,19 @@ body {
   border: none;
   border-radius: 1rem;
   cursor: pointer;
+}
+.frequency {
+  background-color: #fff4ec;
+  cursor: pointer;
+}
+
+.frequency:hover {
+  background-color: #f6e6d9;
+}
+
+.subLabel,
+.frequency {
+  display: none;
 }
 
 .gifts {
